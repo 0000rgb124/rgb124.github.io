@@ -1,15 +1,5 @@
-import { defineConfig } from "vite";
-import { resolve } from 'path'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
-  root: './src/',
-  build: {
-    outDir: '../',
-    lib: {
-      entry: resolve(__dirname, 'src/main.js'),
-      name: 'main',
-      // the proper extensions will be added
-      fileName: 'main'
-    },
-  }
+  base: '/rgb124.github.io/'
 })
