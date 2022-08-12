@@ -23,9 +23,9 @@ var createScene = function(){
   camera.upperAlphaLimit = Math.PI * 2;
   camera.attachControl(canvas, false);
 
-  const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
+  const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 2, 0), scene);
 
-  light.intensity = 0.15;
+  light.intensity = 0.3;
 
   // CORNER SHAPE LEFT
 
@@ -95,13 +95,13 @@ var createScene = function(){
   // MATERIAL
 
   const pbr = new BABYLON.PBRSpecularGlossinessMaterial("pbr", scene);
-  pbr.diffuseColor = new BABYLON.Color3(0, 0, 0, 0.23);
+  pbr.diffuseColor = new BABYLON.Color3(0.2, 0.2, 0.2, 1.0);
   pbr.specularColor = new BABYLON.Color3(0.21, 0.21, 0.21, 0.43);
   pbr.metallic = 0.5;
-  pbr.roughness = 0.0;
-  pbr.glossiness = 0.87; // Let the texture controls the value 
-  pbr.environmentTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("/textures/Studio_Softbox_2Umbrellas_cube_specular.dds", scene);
-  pbr.specularGlossinessTexture = new BABYLON.Texture("/textures/reflectivity.png", scene);
+  pbr.roughness = 0.9;
+  pbr.glossiness = 0.95; // Let the texture controls the value 
+  pbr.environmentTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/gh-pages/assets/textures/studio008_skybox.dds", scene);
+  pbr.specularGlossinessTexture = new BABYLON.Texture("https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/gh-pages/assets/textures/reflectivity.png", scene);
 
   box.material = pbr;
   boxA.material = pbr;
