@@ -95,7 +95,7 @@ var createScene = function(){
   // MATERIAL
 
   const pbr = new BABYLON.PBRSpecularGlossinessMaterial("pbr", scene);
-  pbr.diffuseColor = new BABYLON.Color3(0.2, 0.2, 0.2, 1.0);
+  pbr.diffuseColor = new BABYLON.Color3(0., 0., 0., 0.23);
   pbr.specularColor = new BABYLON.Color3(0.21, 0.21, 0.21, 0.43);
   pbr.metallic = 0.5;
   pbr.roughness = 0.0;
