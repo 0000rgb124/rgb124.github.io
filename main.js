@@ -42,14 +42,14 @@ var engine = new BABYLON.Engine(canvas, true, {
   stencil: true,
 });
 // CreateScene function that creates and return the scene
-var createScene = function () {
+var createScene = () => {
   // BASIC SCENE
   var scene = new BABYLON.Scene(engine);
   // CAMERA SETUP
   var camera = new BABYLON.ArcRotateCamera(
     'Camera',
-    0,
-    0,
+    0.75,
+    1.25,
     8,
     BABYLON.Vector3.Zero(),
     scene
@@ -57,34 +57,25 @@ var createScene = function () {
   // camera.lowerAlphaLimit = Math.PI;
   // camera.upperAlphaLimit = Math.PI * 2;
   camera.attachControl(canvas, false);
+  camera.useAutoRotationBehavior = true;
 
   const light = new BABYLON.HemisphericLight(
     'light',
-    new BABYLON.Vector3(0, 1, 0),
+    new BABYLON.Vector3(1, 1, 0),
     scene
   );
 
-  light.intensity = 0.85;
+  light.intensity = 0.25;
 
   const pbr = new BABYLON.PBRMetallicRoughnessMaterial('pbr', scene);
   pbr.diffuseColor = new BABYLON.Color3(0, 0, 0, 0.73);
   pbr.specularColor = new BABYLON.Color3(0.21, 0.21, 0.21, 0.83);
-  pbr.metallic = 1.0; // set to 1 to only use it from the metallicRoughnessTexture
-  pbr.roughness = 1.0; // set to 1 to only use it from the metallicRoughnessTexture
+  pbr.metallic = 0.8; // set to 1 to only use it from the metallicRoughnessTexture
+  pbr.roughness = 0.25; // set to 1 to only use it from the metallicRoughnessTexture
   pbr.metallicRoughnessTexture = new BABYLON.Texture(
     `https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/texture/ROUGH_00000.jpg`,
     scene
   );
-
-  // pbr.reflectionTexture = new HDRCubeTexture(
-  //   'https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/texture/dark_dramatic_key_a.hdr',
-  //   scene,
-  //   512,
-  //   false,
-  //   true,
-  //   false,
-  //   true
-  // );
 
   pbr.environmentTexture = BABYLON.CubeTexture.CreateFromPrefilteredData(
     'https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/texture/environment.env',
