@@ -12,6 +12,7 @@
     "vite": "^3.0.0"
   },
   "dependencies": {
-    "babylonjs": "^5.19.0"
+    "babylonjs": "^5.28.0",
+    "babylonjs-loaders": "^5.28.0"
   }
 }
