@@ -16,7 +16,7 @@ BABYLON.DefaultLoadingScreen.prototype.displayLoadingUI = function () {
   customLoadingScreenCss.innerHTML = `
   #customLoadingScreenDiv{
       background-color: white;
-      background-image: url('./public/assets/loadingv1.gif');
+      background-image: url('loadingv1.gif');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-position: center;
