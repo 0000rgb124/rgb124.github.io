@@ -36,34 +36,32 @@ var createScene = function () {
   light.intensity = 0.15;
 
   const logo = BABYLON.SceneLoader.Append(
-    './cinema4d/',
+    'https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/',
     'modelinglogo2.obj',
     scene,
     function (scene) {
-      // do something with the scene
+      const pbr = new BABYLON.PBRSpecularGlossinessMaterial('pbr', scene);
+      pbr.diffuseColor = new BABYLON.Color3(0, 0, 0, 0.23);
+      pbr.specularColor = new BABYLON.Color3(0.21, 0.21, 0.21, 0.43);
+      pbr.metallic = 0.5;
+      pbr.roughness = 0.0;
+      pbr.glossiness = 0.87; // Let the texture controls the value
+      pbr.environmentTexture = BABYLON.CubeTexture.CreateFromPrefilteredData(
+        'https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/gh-pages/assets/textures/Studio_Softbox_2Umbrellas_cube_specular.dds',
+        scene
+      );
+      pbr.specularGlossinessTexture = new BABYLON.Texture(
+        'https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/texture/emissive/emissive_00000.jpg',
+        scene
+      );
+
+      logo.material = pbr;
+
+      scene.clearColor = new BABYLON.Color3(1, 1, 1);
     }
   );
 
   // MATERIAL
-
-  const pbr = new BABYLON.PBRSpecularGlossinessMaterial('pbr', scene);
-  pbr.diffuseColor = new BABYLON.Color3(0, 0, 0, 0.23);
-  pbr.specularColor = new BABYLON.Color3(0.21, 0.21, 0.21, 0.43);
-  pbr.metallic = 0.5;
-  pbr.roughness = 0.0;
-  pbr.glossiness = 0.87; // Let the texture controls the value
-  pbr.environmentTexture = BABYLON.CubeTexture.CreateFromPrefilteredData(
-    'https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/gh-pages/assets/textures/Studio_Softbox_2Umbrellas_cube_specular.dds',
-    scene
-  );
-  pbr.specularGlossinessTexture = new BABYLON.Texture(
-    './cinema4d/texture/emissive/emissive_00000.jpg',
-    scene
-  );
-
-  logo.material = pbr;
-
-  scene.clearColor = new BABYLON.Color3(1, 1, 1);
 
   return scene;
 };
