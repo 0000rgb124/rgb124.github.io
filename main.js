@@ -10,15 +10,17 @@ BABYLON.DefaultLoadingScreen.prototype.displayLoadingUI = function () {
   }
   this._loadingDiv = document.createElement('div');
   this._loadingDiv.id = 'customLoadingScreenDiv';
-  this._loadingDiv.innerHTML = 'scene is currently loading';
+  // this._loadingDiv.innerHTML = 'scene is currently loading';
   var customLoadingScreenCss = document.createElement('style');
   customLoadingScreenCss.type = 'text/css';
   customLoadingScreenCss.innerHTML = `
   #customLoadingScreenDiv{
-      background-color: #BB464Bcc;
-      color: white;
-      font-size:50px;
-      text-align:center;
+      background-color: white;
+      background-image: url('./public/assets/loadingv1.gif');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: auto;
   }
   `;
   document.getElementsByTagName('head')[0].appendChild(customLoadingScreenCss);
