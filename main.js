@@ -38,7 +38,7 @@ var createScene = function () {
     scene
   );
 
-  light.intensity = 0.15;
+  light.intensity = 0.85;
 
   const pbr = new BABYLON.PBRMetallicRoughnessMaterial('pbr', scene);
   pbr.diffuseColor = new BABYLON.Color3(0, 0, 0, 0.73);
@@ -49,6 +49,17 @@ var createScene = function () {
     `https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/texture/ROUGH_00000.jpg`,
     scene
   );
+
+  // pbr.reflectionTexture = new HDRCubeTexture(
+  //   'https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/texture/dark_dramatic_key_a.hdr',
+  //   scene,
+  //   512,
+  //   false,
+  //   true,
+  //   false,
+  //   true
+  // );
+
   pbr.environmentTexture = BABYLON.CubeTexture.CreateFromPrefilteredData(
     'https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/texture/dark_dramatic_key_a.hdr',
     scene
