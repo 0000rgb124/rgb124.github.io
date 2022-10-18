@@ -50,7 +50,7 @@ var createScene = function () {
     scene
   );
   pbr.environmentTexture = BABYLON.CubeTexture.CreateFromPrefilteredData(
-    'https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/gh-pages/assets/textures/Studio_Softbox_2Umbrellas_cube_specular.dds',
+    'https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/texture/dark_dramatic_key_a.hdr',
     scene
   );
 
@@ -59,7 +59,7 @@ var createScene = function () {
   for (let i = 0; i < 56; i++) {
     textureFiles.push(
       new BABYLON.Texture(
-        `https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/texture/emissive/emissive_000${i
+        `https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/texture/emissive/emi2k_000${i
           .toString()
           .padStart(2, '0')}.jpg`,
         scene
