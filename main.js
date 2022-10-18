@@ -61,7 +61,7 @@ var createScene = function () {
   // );
 
   pbr.environmentTexture = BABYLON.CubeTexture.CreateFromPrefilteredData(
-    'https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/texture/dark_dramatic_key_a.hdr',
+    'https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/texture/environment.env',
     scene
   );
 
