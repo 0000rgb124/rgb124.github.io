@@ -86,10 +86,10 @@ var createScene = () => {
 
   const textureFiles = [];
 
-  for (let i = 0; i < 56; i++) {
+  for (let i = 0; i < 76; i++) {
     textureFiles.push(
       new BABYLON.Texture(
-        `https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/texture/emissive/emi2k_000${i
+        `https://raw.githubusercontent.com/0000rgb124/rgb124.github.io/main/cinema4d/texture/emissive/Emission_v2_000${i
           .toString()
           .padStart(2, '0')}.jpg`,
         scene
@@ -122,7 +122,7 @@ var createScene = () => {
     pbr.baseTexture = textureFiles[counter];
     if (iFrame % 2 == 0) counter++;
     iFrame++;
-    if (counter == 55) counter = 0;
+    if (counter == 76) counter = 0;
   });
 
   scene.onPointerDown = (event, pickResult) => {
