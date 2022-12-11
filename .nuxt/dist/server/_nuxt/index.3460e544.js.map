@@ -1,1 +1,0 @@
-{"version":3,"file":"index.3460e544.js","sources":["../../../../components/homeLink.vue"],"sourcesContent":["<template>\n  <NuxtLink class=\"link link--home\" to=\"/\">x</NuxtLink>\n</template>\n"],"names":["_ssrRenderComponent","_mergeProps"],"mappings":";;;;;;;;;;;;;;;;;AACY,QAAAA,mBAAA,qBAAAC,WAAA;AAAA,IAAwB,OAAA;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"}

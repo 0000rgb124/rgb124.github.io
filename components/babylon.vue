@@ -27,7 +27,6 @@ import {
 
 import { OBJFileLoader } from 'babylonjs-loaders';
 
-SceneLoader.RegisterPlugin(new OBJFileLoader())
 
 
 // the variable name MUST match the ref value used in the html templte above
@@ -35,6 +34,9 @@ const bjsCanvas = ref(null);
 let engine;
 // the canvas is accessible only when the component is already mounted
 onMounted(() => {
+
+  SceneLoader.RegisterPlugin(new OBJFileLoader())
+
   const BJS_CANVAS_WIDTH = window.innerWidth;
   const BJS_CANVAS_HEIGHT = window.innerHeight;
   const BJS_CANVAS_ZINDEX = "-1";
