@@ -5,7 +5,7 @@
   <div class="content">
     <slot />
   </div>
-  <Babylon />
+  <!-- <Babylon /> -->
 </template>
 
 <script setup>
