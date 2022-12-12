@@ -1,0 +1,1 @@
+import{a as e,o as t,c,w as s,f as r,h as a}from"./entry.b69fab64.js";const f={};function i(o,_){const n=a;return t(),c(n,{class:"link link--home",to:"/"},{default:s(()=>[r("x")]),_:1})}const x=e(f,[["render",i]]),m={};function u(o,_){const n=x;return t(),c(n)}const p=e(m,[["render",u]]);export{p as default};
