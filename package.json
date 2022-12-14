@@ -5,18 +5,18 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "3.0.0.rc13",
-    "pug": "^3.0.2",
-    "pug-plain-loader": "^1.1.0",
-    "push-dir": "^0.4.1"
+    "nuxt": "3.0.0",
+    "sass": "^1.56.2"
   },
   "dependencies": {
     "@babylonjs/core": "^5.37.0",
+    "@babylonjs/loaders": "^5.37.0",
+    "@pinia/nuxt": "^0.4.6",
+    "babylonjs": "^5.37.0",
     "babylonjs-loaders": "^5.37.0",
-    "sass": "^1.56.1"
+    "pinia": "^2.0.28"
   }
 }

@@ -43,6 +43,9 @@
       "assets": [
         "assets"
       ],
+      "assets/*": [
+        "assets/*"
+      ],
       "public": [
         "public"
       ],
@@ -57,6 +60,9 @@
       ],
       "vue-demi": [
         "node_modules/nuxt/dist/app/compat/vue-demi"
+      ],
+      "pinia": [
+        "node_modules/pinia/dist/pinia"
       ],
       "#head": [
         "node_modules/nuxt/dist/head/runtime"
