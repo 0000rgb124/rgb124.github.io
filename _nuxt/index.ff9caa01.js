@@ -1,0 +1,1 @@
+import{a as t,b as o,o as s,F as a,e}from"./entry.e086bf03.js";const c={},n=e("a",{href:""},"A",-1),r=e("a",{href:""},"B",-1),_=e("a",{href:""},"C",-1),f=e("a",{href:""},"D",-1);function d(h,i){return s(),o(a,null,[n,r,_,f],64)}const m=t(c,[["render",d]]);export{m as default};
